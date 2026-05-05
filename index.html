@@ -2,98 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Leon Terrell Ash - Music</title>
+  <title>Leon Terrell Ash</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #fff;
+      background: #111;
+      color: white;
       text-align: center;
     }
 
-    header {
-      padding: 50px 20px;
-      background: linear-gradient(135deg, #111, #1db954);
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
     }
 
     h1 {
-      margin: 0;
-      font-size: 2.8rem;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
-    .container {
-      padding: 30px 20px;
-      max-width: 600px;
-      margin: auto;
+    p {
+      color: #ccc;
+      margin-bottom: 30px;
     }
 
-    .song {
-      margin-bottom: 40px;
+    form {
+      background: #1c1c1c;
       padding: 25px;
-      background: #1a1a1a;
       border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-    }
-
-    audio {
       width: 100%;
-      margin: 15px 0;
+      max-width: 400px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 25px;
-      background: #1db954;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 10px;
+    input, textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
       font-weight: bold;
     }
 
-    .btn:hover {
-      background: #17a44b;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #aaa;
+    button:hover {
+      background: #ddd;
     }
   </style>
 </head>
 
 <body>
+  <div class="container">
+    <h1>Leon Terrell Ash</h1>
+    <p>Contact me below</p>
 
-<header>
-  <h1>Leon Terrell Ash</h1>
-  <p>Listen. Support. Download.</p>
-</header>
-
-<div class="container">
-
-  <div class="song">
-    <h2>In My Zone</h2>
-    <p>Produced by Leon Terrell Ash</p>
-    
-    <audio controls>
-      <source src="smaple.mp3" type="audio/mpeg">
-    </audio>
-
-    <a class="btn" href="https://teamash26.gumroad.com/l/InMyZone" target="_blank">
-      Buy / Download
-    </a>
+    <form action="https://formspree.io/f/mdabgvnz" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="message" placeholder="Your message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
-
-</div>
-
-<footer>
-  © 2026 Leon Terrell Ash | All Rights Reserved
-</footer>
-
 </body>
 </html>
